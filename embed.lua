@@ -6,7 +6,8 @@ function MessageEmbed.new()
 end
 
 function MessageEmbed:setColor(color)
-	self.color = tonumber(tostring(color):gsub('#', '0x'))
+	local _color, pos = tostring(color):gsub('#', '0x')
+	self.color = tonumber(_color)
 	return self
 end
 
