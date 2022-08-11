@@ -38,7 +38,7 @@ overrides[142847746] = {
 			local config = tool:FindFirstChild'WeaponConfig' and require(tool.WeaponConfig)
 			local damage = config and (config.MinDamage + config.MaxDamage) / 2
 
-			self.mob_text = 'Target: ' .. mob.Name
+			self.mob_text.Text = 'Target: ' .. mob.Name
 
 			if damage and flags.oneShot then
 				local iterations
